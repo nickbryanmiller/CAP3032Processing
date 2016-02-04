@@ -1,3 +1,12 @@
+/*
+Nicholas Miller
+This is part 1!
+It is two sine functions moving to the right.
+The are of opposite amplitude so that is why they look like DNA.
+The only variable being changed is the y-value for each coordinate.
+The y-values change with the framecount (at a constant rate) giving it the smooth flow.
+*/
+
 int ellipseWidth = 15;
 float amplitude = 50;
 

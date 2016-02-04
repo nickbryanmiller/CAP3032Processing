@@ -1,3 +1,12 @@
+/*
+Nicholas Miller
+This is Part 2!
+There are 64 squares just like on a checkerboard.
+They are given a random color and they keep that color
+As you move your mouse over a square the border turns white
+This is how you can know which square you are selecting
+*/
+
 float dimen = 50;
 float alpha = 255;
 
