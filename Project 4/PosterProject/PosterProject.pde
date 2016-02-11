@@ -1,3 +1,13 @@
+/*
+Nicholas Miller
+This is a design for the Association of Computer Engineers.
+It has the ACE logo.
+It has the University of Florida test.
+It has a series of 1's and 0's moving in the background.
+The computers flash "error!" until they blue screen for a while.
+Then the processes repeats.
+*/
+
 String[] myWord = {"0", "1"};
 int index = 0;
 boolean isZero = true;
@@ -94,17 +104,8 @@ void draw() {
     errorCount = 0;
   }
   
-  //if (isZero) {
-  //    index = 1;
-  //    isZero = false;
-  //  }
-  //  else if (!isZero) {
-  //    index = 0;
-  //    isZero = true;
-  //  }
-  
+  yMoving++;
   if (yMoving > 200) {
     yMoving = 0;
   }
-  yMoving++;
 }
