@@ -1,3 +1,11 @@
+/*
+Nicholas Miller
+This is program to change an image based on different filters.
+The image is of my dog leo in underwear.
+There are 7 buttons available to choose.
+Each changes the appreance of the image.
+*/
+
 PImage imageOfLeo;
 int w = 150;
 int h = 50;
