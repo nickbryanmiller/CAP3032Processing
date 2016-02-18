@@ -148,5 +148,5 @@ void draw() {
   drawArcs(50, 0, 100, 35, 0.2, -PI/4, PI/4, 3, 255);
  
   // Screenshot the canvas
-  //save("kaleidoscope.tif");
+  //save("kaleidoscopeNM.tif");
 }
