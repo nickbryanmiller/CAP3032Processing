@@ -1,83 +1,51 @@
+/*
+Nicholas Miller
+This is part 3 for project 5!
+It is a scene where a puppy with a pencil comes up, draws the scene, and leaves.
+Once the scene is drawn a cannon shoots a frisbee and a dog jumps to catch it.
+This then loops forever.
+*/
+
+// Background
 PImage park;
+// The puppy with the pencil picture
 PuppyWithPencil pupPenc;
+// Open list of a lot of colors because lazy
 MyColors myColor;
-
+// Cannon
 PImage cannon;
-int frisbeeX = 1050;
-int frisbeeY = 225;
-int frisbeeXOrigin = 1050;
-int frisbeeYOrigin = 225;
-
-PImage dog;
-int dogX = 50;
-int dogY = 415;
-int dogXOrigin = 50;
-int dogYOrigin = 415;
-
-boolean frisbeeCaught = false;
+// The frisbee and dog pictures
+FrisbeeAndDog frisbeeAndDog;
 
 void setup() {
   size(1200, 702);
   park = loadImage("park2.png");
   pupPenc = new PuppyWithPencil();
   myColor = new MyColors();
-  
   cannon = loadImage("cannon.png");
-  dog = loadImage("dog.png");
+  frisbeeAndDog = new FrisbeeAndDog();
 }
 
 void draw() {
+  // reset any unwanted changes
   resetMatrix();
   
+  //Paint the background
   image(park, 0, 0);
   
-  resetMatrix();
-  image(dog, dogX, dogY);
+  // Paint the dog and frisbee
+  frisbeeAndDog.paint();
   
-  fill(myColor.red);
-  stroke(myColor.black);
-  if (!frisbeeCaught) {
-    rotate(0.3);
-  }
-  else {
-    resetMatrix();
-  }
-  ellipse(frisbeeX, frisbeeY, 75, 37);
-  
+  // Paint the cannon with no rotation
   resetMatrix();
   image(cannon, 850, 400);
-    
+  
+  // Have the puppy draw the screen
   pupPenc.go();
   
+  // If the puppy is done then run the loop with the frisbee and the dog.
   if (pupPenc.isDone()) {
-   
-   if (frisbeeX <= dogX + dog.width + 40) {
-     frisbeeCaught = true;
-     if (frisbeeCaught) {
-       frisbeeX = dogX + dog.width + 10;
-       dogY += 2;
-       frisbeeY = dogY + 25;
-     }
-   }
-   else {
-     dogY -= 2;
-     frisbeeX -= 5;
-     frisbeeY -= 0.005;
-   }
-   
-   if (dogY >= dogYOrigin && frisbeeCaught) {
-     reset();
-   }
+    frisbeeAndDog.runFrisbeeDogLoop();
   }
  
-}
-
-void reset() {
-  frisbeeX = frisbeeXOrigin;
-  frisbeeY = frisbeeYOrigin;
-
-  dogX = dogXOrigin;
-  dogY = dogYOrigin;
-
-  frisbeeCaught = false;
 }

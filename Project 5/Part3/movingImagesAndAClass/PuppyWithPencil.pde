@@ -14,8 +14,8 @@ class PuppyWithPencil {
     myColor = new MyColors();
   }
   
+  // Call the start screen
   void go() {
-    
     fill(myColor.white);
     stroke(myColor.black);
     if (!rightReached) {
@@ -36,6 +36,8 @@ class PuppyWithPencil {
     return rightReached;
   }
   
+  // Determine where the rectangle is after the puppy is all the way left
+  // Delegate which movement method to call for the puppy
   void drawThePuppyWithThePencil() {
     if (!leftReached) {
       rect(0, 0, 1200, 702);
@@ -51,6 +53,7 @@ class PuppyWithPencil {
     }
   }
   
+  // Move the puppy up and down and as it hits the top move everything to the right
   void puppyDrawsScreen() {
     image(puppyPencil, pupPencX, pupPencY);
     if (pupPencY <= 0) {
@@ -70,6 +73,7 @@ class PuppyWithPencil {
     }
   }
   
+  // The scene where the puppy moves up and to the left
   void startMovement() {
    image(puppyPencil, pupPencX, pupPencY);
   
