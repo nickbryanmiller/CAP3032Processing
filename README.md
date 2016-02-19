@@ -10,10 +10,12 @@ Image here
 
 # Project 2 - Moving Balls
 
-There is a square block of size 30x30 at the upper-left corner of a region
-There are two balls moving in the region.
-One is moving along the edges.
-The other one is bouncing between the edges of the region and the edges of the block.
+- There is a square block of size 30x30 at the upper-left corner of a region
+- There are two balls moving in the region.
+- One is moving along the edges.
+- The other one is bouncing between the edges of the region and the edges of the block.
+
+#### Moving Balls Gif
 
 <img src='http://i.imgur.com/H043JEl.gif' title='Moving Balls Gif' width='' alt='Moving Balls Gif' />
 
