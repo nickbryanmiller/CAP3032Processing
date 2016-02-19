@@ -4,7 +4,7 @@
 
 This object was my version of a snowflake.
 
-### Snowflake Image
+#### Snowflake Image
 
 Image here
 
@@ -15,7 +15,7 @@ There are two balls moving in the region.
 One is moving along the edges.
 The other one is bouncing between the edges of the region and the edges of the block.
 
-### Moving Balls Gif
+#### Moving Balls Gif
 
 Gif here
 
