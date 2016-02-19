@@ -25,7 +25,7 @@ It is a little creature that fades in slowly.
 After he fades into view his eyes change color randomly.
 His eyebrows also raise up and down.
 
-## Fading Face Gif
+#### Fading Face Gif
 
 Gif here
 
@@ -36,7 +36,7 @@ The are of opposite amplitude so that is why they look like DNA.
 The only variable being changed is the y-value for each coordinate.
 The y-values change with the framecount (at a constant rate) giving it the smooth flow.
 
-## Moving Double Sine Wave Gif
+#### Moving Double Sine Wave Gif
 
 Gif here
 
@@ -49,7 +49,7 @@ It has a series of 1's and 0's moving in the background.
 The computers flash "error!" until they blue screen for a while.
 Then the processes repeats.
 
-## Animated School Logo Gif
+#### Animated School Logo Gif
 
 Gif here
 
@@ -60,11 +60,11 @@ I set the framerate low so that you could see different variations.
 There is a flower like object in the middle and background.
 The petals grow on each other and blend into the shape you see.
 
-## My Kaleidoscope Gif
+#### My Kaleidoscope Gif
 
 Gif here
 
-## My Kaleidoscope Image
+#### My Kaleidoscope Image
 
 Image here
 
@@ -75,7 +75,7 @@ The image is of my dog leo in underwear.
 There are 7 buttons available to choose.
 Each changes the appreance of the image.
 
-## Change The Image Of Leo Gif
+#### Change The Image Of Leo Gif
 
 Gif here
 
@@ -85,7 +85,7 @@ It is a scene where a puppy with a pencil comes up, draws the scene, and leaves.
 Once the scene is drawn a cannon shoots a frisbee and a dog jumps to catch it.
 This then loops forever.
 
-## Day At The Dog Park Gif
+#### Day At The Dog Park Gif
 
 Gif here
 
