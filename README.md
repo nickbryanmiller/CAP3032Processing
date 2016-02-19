@@ -27,7 +27,7 @@ Image here
 
 #### Fading Face Gif
 
-Gif here
+<img src='http://i.imgur.com/H043JEl.gif' title='Fading Face Gif' width='' alt='Fading Face Gif' />
 
 # Project 4 - Moving Double Sine Wave
 
@@ -38,7 +38,7 @@ Gif here
 
 #### Moving Double Sine Wave Gif
 
-Gif here
+<img src='http://i.imgur.com/H043JEl.gif' title='Moving Double Sine Wave Gif' width='' alt='Moving Double Sine Wave Gif' />
 
 # Project 5 - Animated School Logo
 
@@ -51,7 +51,7 @@ Gif here
 
 #### Animated School Logo Gif
 
-Gif here
+<img src='http://i.imgur.com/H043JEl.gif' title='Animated School Logo Gif' width='' alt='Animated School Logo Gif' />
 
 # Project 6 - My Kaleidoscope
 
@@ -62,7 +62,7 @@ Gif here
 
 #### My Kaleidoscope Gif
 
-Gif here
+<img src='http://i.imgur.com/H043JEl.gif' title='My Kaleidoscope Gif' width='' alt='My Kaleidoscope Gif' />
 
 #### My Kaleidoscope Image
 
@@ -77,7 +77,7 @@ Image here
 
 #### Change The Image Of Leo Gif
 
-Gif here
+<img src='http://i.imgur.com/H043JEl.gif' title='Change The Image Of Leo Gif' width='' alt='Change The Image Of Leo Gif' />
 
 # Project 8 - Day At The Dog Park
 
@@ -87,7 +87,7 @@ Gif here
 
 #### Day At The Dog Park Gif
 
-Gif here
+<img src='http://i.imgur.com/H043JEl.gif' title='Day At The Dog Park Gif' width='' alt='Day At The Dog Park Gif' />
 
 ## Notes
 
