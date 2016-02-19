@@ -6,7 +6,7 @@ This object was my version of a snowflake.
 
 #### Snowflake Image
 
-Image here
+<img src='http://i.imgur.com/uUSFSTs.png' title='Snowflake Image' width='' alt='Snowflake Image' />
 
 # Project 2 - Moving Balls
 
@@ -40,7 +40,20 @@ Image here
 
 <img src='http://i.imgur.com/vONxlgw.gif' title='Moving Double Sine Wave Gif' width='' alt='Moving Double Sine Wave Gif' />
 
-# Project 5 - Animated School Logo
+# Project 5 - Geometric Pattern
+
+- It is a geometric pattern.
+- There are a series of squares in the background.
+- These squares have a red and black color pattern.
+- In front of them is a series of diamonds.
+- The top half of each diamond is cyan.
+- The bottom half of each diamond is yellow.
+
+#### Geometric Pattern Image
+
+<img src='http://i.imgur.com/fPh03cJ.png' title='Geometric Pattern Image' width='' alt='Geometric Pattern Image' />
+
+# Project 6 - Animated School Logo
 
 - This is a design for the Association of Computer Engineers.
 - It has the ACE logo.
@@ -53,7 +66,7 @@ Image here
 
 <img src='http://i.imgur.com/gQ19Awn.gif' title='Animated School Logo Gif' width='' alt='Animated School Logo Gif' />
 
-# Project 6 - My Kaleidoscope
+# Project 7 - My Kaleidoscope
 
 - It is my creation of a kaleidoscope.
 - I set the framerate low so that you could see different variations.
@@ -66,9 +79,9 @@ Image here
 
 #### My Kaleidoscope Image
 
-Image here
+<img src='http://i.imgur.com/Ie2Yvq3.png' title='My Kaleidoscope Image' width='' alt='My Kaleidoscope Image' />
 
-# Project 7 - Change The Image Of Leo
+# Project 8 - Change The Image Of Leo
 
 - This is program to change an image based on different filters.
 - The image is of my dog leo in underwear.
@@ -79,7 +92,7 @@ Image here
 
 <img src='http://i.imgur.com/Ie1leWx.gif' title='Change The Image Of Leo Gif' width='' alt='Change The Image Of Leo Gif' />
 
-# Project 8 - Day At The Dog Park
+# Project 9 - Day At The Dog Park
 
 - It is a scene where a puppy with a pencil comes up, draws the scene, and leaves.
 - Once the scene is drawn a cannon shoots a frisbee and a dog jumps to catch it.
