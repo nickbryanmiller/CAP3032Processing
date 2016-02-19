@@ -17,7 +17,7 @@ Image here
 
 #### Moving Balls Gif
 
-<img src='http://i.imgur.com/H043JEl.gif' title='Moving Balls Gif' width='' alt='Moving Balls Gif' />
+<img src='http://i.imgur.com/naZe3Kl.gif' title='Moving Balls Gif' width='' alt='Moving Balls Gif' />
 
 # Project 3 - Fading Face
 
@@ -27,7 +27,7 @@ Image here
 
 #### Fading Face Gif
 
-<img src='http://i.imgur.com/H043JEl.gif' title='Fading Face Gif' width='' alt='Fading Face Gif' />
+<img src='http://i.imgur.com/QAV4uys.gif' title='Fading Face Gif' width='' alt='Fading Face Gif' />
 
 # Project 4 - Moving Double Sine Wave
 
@@ -38,7 +38,7 @@ Image here
 
 #### Moving Double Sine Wave Gif
 
-<img src='http://i.imgur.com/H043JEl.gif' title='Moving Double Sine Wave Gif' width='' alt='Moving Double Sine Wave Gif' />
+<img src='http://i.imgur.com/vONxlgw.gif' title='Moving Double Sine Wave Gif' width='' alt='Moving Double Sine Wave Gif' />
 
 # Project 5 - Animated School Logo
 
@@ -51,7 +51,7 @@ Image here
 
 #### Animated School Logo Gif
 
-<img src='http://i.imgur.com/H043JEl.gif' title='Animated School Logo Gif' width='' alt='Animated School Logo Gif' />
+<img src='http://i.imgur.com/gQ19Awn.gif' title='Animated School Logo Gif' width='' alt='Animated School Logo Gif' />
 
 # Project 6 - My Kaleidoscope
 
@@ -62,7 +62,7 @@ Image here
 
 #### My Kaleidoscope Gif
 
-<img src='http://i.imgur.com/H043JEl.gif' title='My Kaleidoscope Gif' width='' alt='My Kaleidoscope Gif' />
+<img src='http://i.imgur.com/qxOETlR.gif' title='My Kaleidoscope Gif' width='' alt='My Kaleidoscope Gif' />
 
 #### My Kaleidoscope Image
 
@@ -77,7 +77,7 @@ Image here
 
 #### Change The Image Of Leo Gif
 
-<img src='http://i.imgur.com/H043JEl.gif' title='Change The Image Of Leo Gif' width='' alt='Change The Image Of Leo Gif' />
+<img src='http://i.imgur.com/Ie1leWx.gif' title='Change The Image Of Leo Gif' width='' alt='Change The Image Of Leo Gif' />
 
 # Project 8 - Day At The Dog Park
 
@@ -87,7 +87,7 @@ Image here
 
 #### Day At The Dog Park Gif
 
-<img src='http://i.imgur.com/H043JEl.gif' title='Day At The Dog Park Gif' width='' alt='Day At The Dog Park Gif' />
+<img src='http://i.imgur.com/EPnPi8O.gif' title='Day At The Dog Park Gif' width='' alt='Day At The Dog Park Gif' />
 
 ## Notes
 
