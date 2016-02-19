@@ -19,8 +19,6 @@ Image here
 
 <img src='http://i.imgur.com/H043JEl.gif' title='Moving Balls Gif' width='' alt='Moving Balls Gif' />
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
-
 # Project 3 - Fading Face
 
 - It is a little creature that fades in slowly.
@@ -93,7 +91,8 @@ Gif here
 
 ## Notes
 
-These are all for class and for reference when doing processing in the future.
+    These are all for class and for reference when doing processing in the future.
+    All GIF's created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## License
 
