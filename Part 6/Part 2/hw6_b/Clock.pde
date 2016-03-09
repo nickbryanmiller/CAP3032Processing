@@ -22,6 +22,8 @@ class Clock {
   
     leftEye = new Eye(cx - 35, cy - 45, 60);
     rightEye = new Eye(cx + 35, cy - 45, 60);
+    
+    noTint();
   }
   
   void display() {
@@ -30,6 +32,16 @@ class Clock {
     float s = map(second(), 0, 60, 0, TWO_PI) - HALF_PI;
     float m = map(minute() + norm(second(), 0, 60), 0, 60, 0, TWO_PI) - HALF_PI; 
     float h = map(hour() + norm(minute(), 0, 60), 0, 24, 0, TWO_PI * 2) - HALF_PI;
+    
+    //// Draw the yellow thing at the top of his head
+    //stroke(255,215,0);
+    //fill(255,215,0);
+    //ellipse(cx, cy - 180, 30, 80);
+    
+    // Draw the brown border
+    fill(102, 51, 0);
+    stroke(102, 51, 0);
+    ellipse(cx, cy, clockDiameter + 30, clockDiameter + 50);
   
     // Draw the clock background
     fill(255,224,189);
@@ -37,6 +49,8 @@ class Clock {
     ellipse(cx, cy, clockDiameter + 20, clockDiameter + 40);
   
     //Draw Eyes
+    fill(102, 51, 0);
+    stroke(102, 51, 0);
     leftEye.update(cx + cos(s) * secondsRadius, cy + sin(s) * secondsRadius);
     rightEye.update(cx + cos(s) * secondsRadius, cy + sin(s) * secondsRadius);
     leftEye.display();
