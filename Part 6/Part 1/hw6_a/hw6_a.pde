@@ -87,6 +87,8 @@ void draw() {
         moveS2Right();
       }
       else if (!didShowCNFor2Sec) {
+        fill(255);
+        rect(300, 455, 770, 60);
         image(cnLogo, 280, 0);
         showTheCN();
       }
