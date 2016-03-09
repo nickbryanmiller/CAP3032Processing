@@ -102,6 +102,14 @@ This object was my version of a snowflake.
 
 <img src='http://i.imgur.com/EPnPi8O.gif' title='Day At The Dog Park Gif' width='' alt='Day At The Dog Park Gif' />
 
+# Project 10 - Cartoon Network and Courage the Cowardly Dog
+
+- This is a scene that mimics the old Cartoon Network Introduction and a classic scene from Courage the Cowardly Dog
+
+#### Cartoon Network and Courage the Cowardly Dog Gif
+
+<img src='http://i.imgur.com/qqycc2S.gif' title='Cartoon Network and Courage the Cowardly Dog Gif' width='' alt='Cartoon Network and Courage the Cowardly Dog Gif' />
+
 ## Notes
 
     These are all for class and for reference when doing processing in the future.
