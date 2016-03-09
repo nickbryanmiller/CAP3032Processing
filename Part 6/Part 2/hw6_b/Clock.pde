@@ -34,13 +34,25 @@ class Clock {
     // Draw the clock background
     fill(255,224,189);
     noStroke();
-    ellipse(cx, cy, clockDiameter, clockDiameter + 20);
+    ellipse(cx, cy, clockDiameter + 20, clockDiameter + 40);
   
     //Draw Eyes
     leftEye.update(cx + cos(s) * secondsRadius, cy + sin(s) * secondsRadius);
     rightEye.update(cx + cos(s) * secondsRadius, cy + sin(s) * secondsRadius);
     leftEye.display();
     rightEye.display();
+    
+    // Thing under eyes
+    noFill();
+    stroke(102, 51, 0);
+    arc(cx - 50, cy - 2, 40, 10, -PI, 0);
+    arc(cx + 50, cy - 2, 40, 10, -PI, 0);
+    
+    // Eyebrows
+    fill(102, 51, 0);
+    stroke(102, 51, 0);
+    rect(cx - 55, cy - 95, 40, 5);
+    rect(cx + 15, cy - 95, 40, 5);
   
     // Draw the smile
     noFill();
@@ -79,6 +91,37 @@ class Clock {
       vertex(x, y);
     }
     endShape();
+    
+    drawNumbers();
   }
 
+  void drawNumbers() {
+    stroke(102, 51, 0);
+    fill(102, 51, 0);
+    
+    int i = 3;
+    for (int a = 0; a < 360; a+=6) {
+      float angle = radians(a);
+      float x = cx + cos(angle) * (secondsRadius + 15);
+      float y = cy + sin(angle) * (secondsRadius + 20);
+      
+      if (a % 30 == 0) {
+        textSize(32);
+        if (i < 10) {
+         text(str(i), x - 10, y + 12);
+        }
+        else if (i == 12) {
+         text(str(i), x - 20, y + 12);
+        }
+        else {
+          text(str(i), x - 25, y + 8);
+        }
+        i++;
+      }
+      
+      if (i > 12) {
+        i = 1;
+      }
+    }
+  }
 }
