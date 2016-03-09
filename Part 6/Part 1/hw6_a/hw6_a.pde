@@ -18,6 +18,8 @@ PImage mask;
 PImage courage;
 PImage cnLogo;
 
+Name name;
+
 int backColor = 255;
 
 boolean introIsDone = false;
@@ -43,7 +45,9 @@ boolean wait = false;
 int waitCount = 0;
 double waitValue = 0;
 
-// For courage
+boolean shouldShowName = false;
+
+// For Nusic
 boolean didPlayIntro = false;
 boolean didScareCourage = false;
 
@@ -59,6 +63,8 @@ void setup() {
   
   cnIntro = new SoundFile(this, "cn.mp3");
   courageIntro = new SoundFile(this, "scare.mp3");
+  
+  name = new Name("Nicholas Miller");
 }
 
 void draw() {
@@ -100,22 +106,31 @@ void draw() {
     drawSquares();
   }
   else if (introIsDone) { 
-    image(livingRoom, 0, 0);
-    image(eustace, 650, 180);
-    image(courage, 250, 400);
+    if (!shouldShowName) {
+      image(livingRoom, 0, 0);
+      image(eustace, 650, 180);
+      image(courage, 250, 400);
+    }
     
     if (!didScareCourage) {
       didScareCourage = !didScareCourage;
       courageIntro.play();
     }
     
-    if (waitCount >= 190) {
+    if (waitCount >= 190 && !shouldShowName) {
       image(mask, 550, 0);
     }
-    if (waitCount >= 200) {
+    if (waitCount >= 200 && !shouldShowName) {
       courage = loadImage("courageScream.png");
     }
-    if (waitCount >= 420) {
+    if (waitCount >= 380 && !shouldShowName) {
+      shouldShowName = true;
+      //resetAll();
+    }
+    if (shouldShowName) {
+      name.display();
+    }
+    if (waitCount >= 440) {
       resetAll();
     }
     
@@ -248,4 +263,5 @@ void resetAll() {
   didScareCourage = false;
   courage = loadImage("courageSit.png");
   didPlayIntro = false;
+  shouldShowName = false;
 }
