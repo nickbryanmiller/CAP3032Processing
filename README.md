@@ -117,7 +117,7 @@ This object was my version of a snowflake.
 
 #### Beauty and the Beast Clock Gif
 
-<img src='' title='Beauty and the Beast Clock Gif' width='' alt='Beauty and the Beast Clock Gif' />
+<img src='http://i.imgur.com/88XBRqM.gif' title='Beauty and the Beast Clock Gif' width='' alt='Beauty and the Beast Clock Gif' />
 
 ## Notes
 
