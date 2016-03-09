@@ -105,6 +105,8 @@ This object was my version of a snowflake.
 # Project 10 - Cartoon Network and Courage the Cowardly Dog
 
 - This is a scene that mimics the old Cartoon Network Introduction and a classic scene from Courage the Cowardly Dog.
+- The Cartoon Network audio plays in the back during the introduction.
+- Courage screaming audio is played in the background when he gets scared.
 
 #### Cartoon Network and Courage the Cowardly Dog Gif
 
@@ -113,7 +115,10 @@ This object was my version of a snowflake.
 # Project 10 - Beauty and the Beast Clock
 
 - This is a clock that stays updated with the current time.
+- The clock's eyes follow the second hand.
 - It is a tribute to Beauty and the Beast.
+- The song 'Tale As Old As Time' plays in the background.
+- Roses fall from above the screen.
 
 #### Beauty and the Beast Clock Gif
 
