@@ -104,11 +104,20 @@ This object was my version of a snowflake.
 
 # Project 10 - Cartoon Network and Courage the Cowardly Dog
 
-- This is a scene that mimics the old Cartoon Network Introduction and a classic scene from Courage the Cowardly Dog
+- This is a scene that mimics the old Cartoon Network Introduction and a classic scene from Courage the Cowardly Dog.
 
 #### Cartoon Network and Courage the Cowardly Dog Gif
 
 <img src='http://i.imgur.com/qqycc2S.gif' title='Cartoon Network and Courage the Cowardly Dog Gif' width='' alt='Cartoon Network and Courage the Cowardly Dog Gif' />
+
+# Project 10 - Beauty and the Beast Clock
+
+- This is a clock that stays updated with the current time.
+- It is a tribute to Beauty and the Beast.
+
+#### Beauty and the Beast Clock Gif
+
+<img src='' title='Beauty and the Beast Clock Gif' width='' alt='Beauty and the Beast Clock Gif' />
 
 ## Notes
 
