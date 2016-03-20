@@ -6,7 +6,7 @@ class Menu {
   MyColors c = new MyColors();
   Button b1 = new Button("Information", 275, 280, 145, 35);
   Button b2 = new Button("Start!", 310, 350, 70, 35);
-  Button b3 = new Button("Back", 320, 350, 60, 35);
+  Button b3 = new Button("Back", 320, 370, 60, 35);
   
   Menu() {
   }
@@ -75,5 +75,13 @@ class Menu {
         didPressStart = false;
       }
     }
+  }
+  
+  void resetAllData() {
+    didPressStart = false;
+    didPressInfo = false;
+    b1.col = c.white;
+    b2.col = c.white;
+    b3.col = c.white;
   }
 }

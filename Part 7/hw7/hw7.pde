@@ -1,6 +1,7 @@
 
 MyColors c = new MyColors();
 Menu menu = new Menu();
+Levels levels = new Levels();
 
 void setup() {
   size(700, 500);
@@ -13,9 +14,25 @@ void draw() {
   if (!menu.startPressed()) {
     menu.display();
   }
+  else {
+    levels.display();
+    if (levels.isQuitPressed()) {
+      resetAllData();
+    }
+  }
  
 }
 
 void mousePressed() {
-  menu.mPressed(mouseX, mouseY);
+  if (!menu.startPressed()) {
+    menu.mPressed(mouseX, mouseY);
+  }
+  else {
+    levels.mPressed(mouseX, mouseY);
+  }
+}
+
+void resetAllData() {
+  menu.resetAllData();
+  levels.resetAllData();
 }
