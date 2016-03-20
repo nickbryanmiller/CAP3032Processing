@@ -23,8 +23,8 @@ class Button {
     fill(col);
     rect(x, y, w, h);
     fill(c.black);
-    textSize(16);
-    text(data, x+5, y+20);
+    textSize(24);
+    text(data, x+5, y+25);
   }
   
   boolean isClicked(float mx, float my) {
