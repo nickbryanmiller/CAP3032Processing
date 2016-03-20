@@ -10,7 +10,10 @@ void setup() {
 void draw() {
   background(c.black);
   
-  menu.display();
+  if (!menu.startPressed()) {
+    menu.display();
+  }
+ 
 }
 
 void mousePressed() {

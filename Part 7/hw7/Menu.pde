@@ -6,6 +6,7 @@ class Menu {
   MyColors c = new MyColors();
   Button b1 = new Button("Information", 275, 280, 145, 35);
   Button b2 = new Button("Start!", 310, 350, 70, 35);
+  Button b3 = new Button("Back", 320, 350, 60, 35);
   
   Menu() {
   }
@@ -14,8 +15,15 @@ class Menu {
     fill(c.white);
     drawWelcome();
     drawName();
-    b1.display();
-    b2.display();
+    
+    if (!didPressInfo && !didPressStart) {
+      b1.display();
+      b2.display();
+    }
+    else if (didPressInfo && !didPressStart) {
+      drawInfo();
+      b3.display();
+    }
   }
   
   void drawWelcome() {
@@ -28,19 +36,44 @@ class Menu {
     text("Nicholas Miller", 560, 480);
   }
   
+  void drawInfo() {
+    textSize(16);
+    text("This application helps people on their typing!", 200, 240);
+    text("Words will appear on the screen and the user has to type that word.", 100, 270);
+    text("If you get it right in an appropriate amount of time you get points.", 100, 300);
+    text("It is as simple as that! Get your typing fingers ready!", 170, 330);
+  }
+  
+  boolean startPressed() {
+    return didPressStart;
+  }
+  
   void mPressed(float mx, float my) {
-    if (b1.isClicked(mx, my)) {
-      b1.col = c.gray;
-      b2.col = c.white;
-    }
-    else if (b2.isClicked(mx, my)) {
-      b1.col = c.white;
-      b2.col = c.gray;
-    }
-    else {
-      b1.col = c.white;
-      b2.col = c.white;
-    }
     
+    if (!didPressInfo) {
+      if (b1.isClicked(mx, my)) {
+        b1.col = c.gray;
+        b2.col = c.white;
+        b3.col = c.white;
+        didPressInfo = true;
+        didPressStart = false;
+      }
+      else if (b2.isClicked(mx, my)) {
+        b1.col = c.white;
+        b2.col = c.gray;
+        b3.col = c.white;
+        didPressInfo = false;
+        didPressStart = true;
+      }
+    }
+    else if (didPressInfo){
+      if (b3.isClicked(mx, my)) {
+        b1.col = c.white;
+        b2.col = c.white;
+        b3.col = c.gray;
+        didPressInfo = false;
+        didPressStart = false;
+      }
+    }
   }
 }
