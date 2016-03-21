@@ -222,6 +222,7 @@ class Levels {
     level1.resetAllData();
     level2.resetAllData();
     level3.resetAllData();
+    score.resetAllData();
     tfs.resetAllData();
   }
 }

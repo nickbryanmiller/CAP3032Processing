@@ -26,4 +26,8 @@ class Score {
   int getScore() {
     return value;
   }
+  
+  void resetAllData() {
+    value = 0;
+  }
 }

@@ -3,6 +3,8 @@ MyColors c = new MyColors();
 Menu menu = new Menu();
 Levels levels = new Levels();
 
+boolean allowChoice = true;
+
 void setup() {
   size(700, 500);
   background(c.black);
@@ -15,6 +17,21 @@ void draw() {
     menu.display();
   }
   else {
+    if (allowChoice) {
+      if (menu.difficulty == 0) {
+        // Base :)
+      }
+      else if (menu.difficulty == 1) {
+        levels.level1.complete = true;
+      }
+      else if (menu.difficulty == 2) {
+        levels.level1.complete = true;
+        levels.level2.complete = true;
+      }
+      
+      allowChoice = false;
+      
+    }
     levels.display();
     if (levels.isQuitPressed()) {
       resetAllData();
@@ -28,6 +45,8 @@ void mousePressed() {
     menu.mPressed(mouseX, mouseY);
   }
   else {
+    
+    
     levels.mPressed(mouseX, mouseY);
   }
 }
@@ -64,4 +83,5 @@ void keyPressed() {
 void resetAllData() {
   menu.resetAllData();
   levels.resetAllData();
+  allowChoice = true;
 }

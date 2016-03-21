@@ -4,11 +4,18 @@ class Menu {
   boolean didPressInfo = false;
   
   MyColors c = new MyColors();
-  Button b1 = new Button("Information", 275, 280, 145, 35);
+  Button b1 = new Button("Information", 275, 285, 145, 35);
   Button b2 = new Button("Start!", 310, 350, 70, 35);
   Button b3 = new Button("Back", 320, 370, 60, 35);
   
+  Button easy = new Button("Easy", 180, 220, 60, 35);
+  Button medium = new Button("Medium", 295, 220, 100, 35);
+  Button hard = new Button("Hard", 450, 220, 65, 35);
+
+  int difficulty = 0;
+
   Menu() {
+    easy.col = c.gray;
   }
   
   void display() {
@@ -19,11 +26,15 @@ class Menu {
     if (!didPressInfo && !didPressStart) {
       b1.display();
       b2.display();
+      easy.display();
+      medium.display();
+      hard.display();
     }
     else if (didPressInfo && !didPressStart) {
       drawInfo();
       b3.display();
     }
+ 
   }
   
   void drawWelcome() {
@@ -74,6 +85,25 @@ class Menu {
         didPressInfo = false;
         didPressStart = false;
       }
+    }
+    
+    if (easy.isClicked(mx, my)) {
+      easy.col = c.gray;
+      medium.col = c.white;
+      hard.col = c.white;
+      difficulty = 0;
+    }
+    else if (medium.isClicked(mx, my)) {
+      easy.col = c.white;
+      medium.col = c.gray;
+      hard.col = c.white;
+      difficulty = 1;
+    }
+    else if (hard.isClicked(mx, my)) {
+      easy.col = c.white;
+      medium.col = c.white;
+      hard.col = c.gray;
+      difficulty = 2;
     }
   }
   
