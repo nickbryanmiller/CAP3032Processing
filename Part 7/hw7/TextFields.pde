@@ -36,4 +36,9 @@ class TextFields {
   void mPressed(float mx, float my) {
 
   }
+  
+  void resetAllData() {
+    tester.data = "";
+    user.data = "";
+  }
 }

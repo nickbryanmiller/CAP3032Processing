@@ -16,7 +16,7 @@ class Level1 {
   }
   
   String wordAtIndex(int i) {
-    if (i < data.length) {
+    if (i < data.length - 1) {
       return data[i];
     }
     else {
@@ -37,6 +37,11 @@ class Level1 {
     if (startButton.isClicked(mx, my)) {
       startBool = true;
     }
+  }
+  
+  void resetAllData() {
+    startBool = false;
+    complete = false;
   }
  
 }

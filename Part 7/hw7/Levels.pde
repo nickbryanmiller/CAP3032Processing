@@ -10,6 +10,8 @@ class Levels {
   Button nextButton = new Button("Next", 385, 400, 65, 35);
   Button checkButton = new Button("Check", 250, 400, 80, 35);
   
+  boolean isWordCorrect = false;
+  
   TextFields tfs = new TextFields();
   
   Level1 level1 = new Level1();
@@ -32,8 +34,16 @@ class Levels {
         tfs.setTesterWord(level1.wordAtIndex(wordIndex));
         tfs.display();
         checkButton.display();
-        nextButton.display();
+        
+        if (isWordCorrect) {
+           nextButton.display();
+        }
       }
+    }
+    else {
+      fill(c.white);
+      textSize(32);
+      text("Congratulations For Finishing The Game!", 30, 200);
     }
     
   }
@@ -60,10 +70,13 @@ class Levels {
     
     if (nextButton.isClicked(mx, my)) {
       wordIndex = wordIndex + 1;
+      isWordCorrect = false;
+      tfs.setUserWord("");
     }
     else if (checkButton.isClicked(mx, my)) {
       if (tfs.getTesterWord().equals(tfs.getUserWord())) {
         print("Correct\n");
+        isWordCorrect = true;
       }
       else {
         print("Wrong\n");
@@ -86,5 +99,12 @@ class Levels {
   void resetAllData() {
     quitPressed = false;
     quit.col = c.white;
+    wordIndex = 0;
+    nextButton.col = c.white;
+    checkButton.col = c.white;
+    isWordCorrect = false;
+    
+    level1.resetAllData();
+    tfs.resetAllData();
   }
 }
