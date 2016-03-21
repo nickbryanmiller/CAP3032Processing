@@ -7,7 +7,7 @@ class Level1 {
   boolean complete = false;
   
   Button startButton = new Button("Start!", 310, 250, 70, 35);
-  
+    
   Level1() {
   }
   
@@ -16,7 +16,7 @@ class Level1 {
   }
   
   String wordAtIndex(int i) {
-    if (i < data.length - 1) {
+    if (i < data.length) {
       return data[i];
     }
     else {
