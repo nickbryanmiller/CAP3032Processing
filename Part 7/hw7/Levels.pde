@@ -19,6 +19,7 @@ class Levels {
   
   Level1 level1 = new Level1();
   Level2 level2 = new Level2();
+  Level3 level3 = new Level3();
     
   Levels() {
     quit.col = c.white;
@@ -47,19 +48,35 @@ class Levels {
       }
     }
     else if (!level2.isComplete()) {
-      print("entered");
       fill(c.white);
       textSize(32);
       text(level2.header, 290, 40);
       if (!level2.didStart()) {
-        print("start shown");
         level2.displayStartButton();
       }
       else if (level2.didStart()) {
-        print("did start");
         tfs.setTesterWord(level2.wordAtIndex(wordIndex));
         print(wordIndex + "\n");
         print(level2.wordAtIndex(wordIndex));
+        tfs.display();
+        checkButton.display();
+        
+        if (isWordCorrect) {
+           nextButton.display();
+        }
+      }
+    }
+    else if (!level3.isComplete()) {
+      fill(c.white);
+      textSize(32);
+      text(level3.header, 290, 40);
+      if (!level3.didStart()) {
+        level3.displayStartButton();
+      }
+      else if (level3.didStart()) {
+        tfs.setTesterWord(level3.wordAtIndex(wordIndex));
+        print(wordIndex + "\n");
+        print(level3.wordAtIndex(wordIndex));
         tfs.display();
         checkButton.display();
         
@@ -77,6 +94,22 @@ class Levels {
     
     score.display();
     
+  }
+  
+  void enterPressed() {
+    wordIndex = wordIndex + 1;
+    if (wordIndex >= 10) {
+      if (!level1.isComplete()) {
+        level1.complete = true;
+      }
+      else if (!level2.isComplete()) {
+        level2.complete = true;
+      }
+      else if (!level3.isComplete()) {
+        level3.complete = true;
+      }
+      wordIndex = 0;
+    }
   }
   
   boolean isQuitPressed() {
@@ -109,6 +142,9 @@ class Levels {
         }
         else if (!level2.isComplete()) {
           level2.complete = true;
+        }
+        else if (!level3.isComplete()) {
+          level3.complete = true;
         }
         wordIndex = 0;
       }
@@ -152,6 +188,11 @@ class Levels {
         level2.mPressed(mx, my);
       }
     }
+    else if (!level3.isComplete()) {
+      if (!level3.didStart()) {
+        level3.mPressed(mx, my);
+      }
+    }
     
     tfs.mPressed(mx, my);
   }
@@ -167,6 +208,7 @@ class Levels {
     
     level1.resetAllData();
     level2.resetAllData();
+    level3.resetAllData();
     tfs.resetAllData();
   }
 }

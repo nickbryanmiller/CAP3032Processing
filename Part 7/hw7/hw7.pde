@@ -48,6 +48,9 @@ void keyPressed() {
       if (key == BACKSPACE) {
         levels.removeLastLetter();
       }
+      else if (key == ENTER) {
+        levels.enterPressed();
+      }
       
     }
     // It's a letter key
