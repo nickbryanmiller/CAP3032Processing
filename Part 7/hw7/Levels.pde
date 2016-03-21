@@ -13,18 +13,22 @@ class Levels {
   
   boolean isWordCorrect = false;
   
+  Score score = new Score();
+  
   TextFields tfs = new TextFields();
   
   Level1 level1 = new Level1();
     
   Levels() {
     quit.col = c.white;
+    
+    checkButton.enabled = false;
   }
   
   void display() {
     quit.display();
     
-    if (!level1.complete) {
+    if (!level1.isComplete()) {
       fill(c.white);
       textSize(32);
       text(level1.header, 290, 40);
@@ -32,6 +36,7 @@ class Levels {
         level1.displayStartButton();
       }
       else if (level1.didStart()) {
+        checkButton.enabled = true;
         tfs.setTesterWord(level1.wordAtIndex(wordIndex));
         tfs.display();
         checkButton.display();
@@ -47,6 +52,8 @@ class Levels {
       text("Congratulations For Finishing The Game!", 30, 200);
       startOver.display();
     }
+    
+    score.display();
     
   }
   
@@ -70,23 +77,27 @@ class Levels {
   
   void mPressed(float mx, float my) {
     
-    if (nextButton.isClicked(mx, my)) {
+    if (nextButton.isClicked(mx, my) && isWordCorrect) {
       wordIndex = wordIndex + 1;
       isWordCorrect = false;
       tfs.setUserWord("");
     }
-    else if (checkButton.isClicked(mx, my)) {
+    else if (checkButton.isClicked(mx, my) && checkButton.enabled) {
       if (tfs.getTesterWord().equals(tfs.getUserWord())) {
         print("Correct\n");
         isWordCorrect = true;
+        score.incrementScore();
       }
       else {
         print("Wrong\n");
+        if (score.getScore() > 0) {
+          score.decrementScore();
+        }
       }
     }
     
-    if (startOver.isClicked(mx, my)) {
-      quitPressed = true;
+    if (startOver.isClicked(mx, my) && level1.isComplete()) {
+     quitPressed = true;
     }
     
     if (quit.isClicked(mx, my)) {

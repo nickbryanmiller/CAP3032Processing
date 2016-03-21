@@ -9,6 +9,8 @@ class Button {
   
   color col;
   
+  boolean enabled = true;
+  
   Button(String data, float x, float y, float w, float h) {
     this.data = data;
     this.x = x;
