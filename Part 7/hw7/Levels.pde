@@ -97,19 +97,32 @@ class Levels {
   }
   
   void enterPressed() {
-    wordIndex = wordIndex + 1;
-    if (wordIndex >= 10) {
-      if (!level1.isComplete()) {
-        level1.complete = true;
+    
+    if (tfs.getTesterWord().equals(tfs.getUserWord())) {
+        print("Correct\n");
+        score.incrementScore();
+        tfs.setUserWord("");
+        
+        wordIndex = wordIndex + 1;
+        if (wordIndex >= 10) {
+          if (!level1.isComplete()) {
+            level1.complete = true;
+          }
+          else if (!level2.isComplete()) {
+            level2.complete = true;
+          }
+          else if (!level3.isComplete()) {
+            level3.complete = true;
+          }
+          wordIndex = 0;
+        }
       }
-      else if (!level2.isComplete()) {
-        level2.complete = true;
+      else {
+        print("Wrong\n");
+        if (score.getScore() > 0) {
+          score.decrementScore();
+        }
       }
-      else if (!level3.isComplete()) {
-        level3.complete = true;
-      }
-      wordIndex = 0;
-    }
   }
   
   boolean isQuitPressed() {
