@@ -15,7 +15,7 @@ class Level1 {
     startButton.display();
   }
   
-  String WordAtIndex(int i) {
+  String wordAtIndex(int i) {
     if (i < data.length) {
       return data[i];
     }
@@ -31,6 +31,12 @@ class Level1 {
   
   boolean isComplete() {
     return complete;
+  }
+  
+  void mPressed(float mx, float my) {    
+    if (startButton.isClicked(mx, my)) {
+      startBool = true;
+    }
   }
  
 }
