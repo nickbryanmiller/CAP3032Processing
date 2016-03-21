@@ -9,6 +9,7 @@ class Levels {
   
   Button nextButton = new Button("Next", 385, 400, 65, 35);
   Button checkButton = new Button("Check", 250, 400, 80, 35);
+  Button startOver = new Button("Start Over!", 280, 400, 130, 35);
   
   boolean isWordCorrect = false;
   
@@ -44,6 +45,7 @@ class Levels {
       fill(c.white);
       textSize(32);
       text("Congratulations For Finishing The Game!", 30, 200);
+      startOver.display();
     }
     
   }
@@ -81,6 +83,10 @@ class Levels {
       else {
         print("Wrong\n");
       }
+    }
+    
+    if (startOver.isClicked(mx, my)) {
+      quitPressed = true;
     }
     
     if (quit.isClicked(mx, my)) {
