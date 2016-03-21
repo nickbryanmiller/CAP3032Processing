@@ -8,6 +8,8 @@ class Menu {
   Button b2 = new Button("Start!", 310, 350, 70, 35);
   Button b3 = new Button("Back", 320, 370, 60, 35);
   
+  Button exit = new Button("Exit", 318, 410, 55, 35);
+  
   Button easy = new Button("Easy", 180, 220, 60, 35);
   Button medium = new Button("Medium", 295, 220, 100, 35);
   Button hard = new Button("Hard", 450, 220, 65, 35);
@@ -34,6 +36,8 @@ class Menu {
       drawInfo();
       b3.display();
     }
+    
+    exit.display();
  
   }
   
@@ -104,6 +108,10 @@ class Menu {
       medium.col = c.white;
       hard.col = c.gray;
       difficulty = 2;
+    }
+    
+    if (exit.isClicked(mx, my)) {
+      exit();
     }
   }
   
