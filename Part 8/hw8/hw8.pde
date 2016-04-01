@@ -1,5 +1,8 @@
 /*
 Nicholas Miller
+This is a Piano for homework 8.
+It is an active piano.
+You can press a key and it will play the right sound.
 */
 
 import processing.sound.*;
@@ -64,16 +67,16 @@ void setup() {
   c5 = new Button("C5", 615, 100, 40, 200, c.white);
   
   // black keys
-  cs3 = new Button("", 25, 100, 30, 100, c.black);
-  ds3 = new Button("", 66, 100, 30, 100, c.black);
-  fs3 = new Button("", 148, 100, 30, 100, c.black);
-  gs3 = new Button("", 189, 100, 30, 100, c.black);
-  as3 = new Button("", 230, 100, 30, 100, c.black);
-  cs4 = new Button("", 312, 100, 30, 100, c.black);
-  ds4 = new Button("", 353, 100, 30, 100, c.black);
-  fs4 = new Button("", 435, 100, 30, 100, c.black);
-  gs4 = new Button("", 476, 100, 30, 100, c.black);
-  as4 = new Button("", 517, 100, 30, 100, c.black);
+  cs3 = new Button("", 61, 100, 30, 100, c.black);
+  ds3 = new Button("", 102, 100, 30, 100, c.black);
+  fs3 = new Button("", 184, 100, 30, 100, c.black);
+  gs3 = new Button("", 225, 100, 30, 100, c.black);
+  as3 = new Button("", 266, 100, 30, 100, c.black);
+  cs4 = new Button("", 348, 100, 30, 100, c.black);
+  ds4 = new Button("", 389, 100, 30, 100, c.black);
+  fs4 = new Button("", 471, 100, 30, 100, c.black);
+  gs4 = new Button("", 512, 100, 30, 100, c.black);
+  as4 = new Button("", 553, 100, 30, 100, c.black);
 }
 
 void draw() {
