@@ -31,10 +31,14 @@ class Enemy {
   
   void checkBounds() {
     if (y >= height) {
-      y = -150;
-      x = random(600);
+      sendBack();
       score.incrementScore();
     }
+  }
+  
+  void sendBack() {
+      y = -150;
+      x = random(600);
   }
   
   void setImage(int picNum) {

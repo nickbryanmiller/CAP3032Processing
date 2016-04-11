@@ -62,6 +62,44 @@ class Level {
     back.display();
     
     score.display();
+    
+    checkForCollision();
+  }
+  
+  void checkForCollision() {
+    // Collision with enemy1
+    modularCheck(enemy1);
+    
+    // Collision with enemy2
+    modularCheck(enemy2);
+    
+    // Collision with enemy3
+    modularCheck(enemy3);
+    
+    // Collision with enemy4
+    modularCheck(enemy4);
+    
+    // Collision with enemy5
+    modularCheck(enemy5);
+  }
+  
+  void modularCheck(Enemy enemy) {
+    // Top left of player
+    if (player.x > enemy.x && player.x < enemy.x + enemy.w && player.y > enemy.y && player.y < enemy.y + enemy.h) {
+      enemy.sendBack();
+    }
+    // Top right of player
+    else if (player.x + player.w > enemy.x && player.x + player.w < enemy.x + enemy.w && player.y > enemy.y && player.y < enemy.y + enemy.h) {
+      enemy.sendBack();
+    }
+    // Bottom left of player
+    else if (player.x > enemy.x && player.x < enemy.x + enemy.w && player.y + player.h > enemy.y && player.y + player.h < enemy.y + enemy.h) {
+     enemy.sendBack();
+    }
+    // Bottom right of player
+    else if (player.x + player.w > enemy.x && player.x + player.w < enemy.x + enemy.w && player.y + player.h > enemy.y && player.y + player.h < enemy.y + enemy.h) {
+      enemy.sendBack();
+    }
   }
   
   void pressedMouse(float mx, float my) {
