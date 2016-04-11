@@ -9,7 +9,10 @@ class Player {
   
   int picNum = 1;
   
-  Player(int picNum, int x, int y) {
+  int dx = 0;
+  int dy = 0;
+  
+  Player(int picNum, float x, float y) {
     this.picNum = picNum;
     this.x = x;
     this.y = y;
@@ -18,6 +21,29 @@ class Player {
   
   void display() {
     image(playerImage, x, y);
+    
+    x = x + dx;
+    y = y + dy;
+    
+    checkBounds();
+  }
+  
+  void checkBounds() {
+    if (y + h >= height) {
+      y = y - 4;
+    }
+    
+    if (y <= 0 ) {
+      y = y + 4;
+    }
+    
+    if (x <= 0) {
+      x = x + 4;
+    }
+    
+    if (x + w >= width) {
+      x = x - 4;
+    }
   }
   
   void setImage(int picNum) {
@@ -36,8 +62,6 @@ class Player {
   
   void setWidthAndHeight() {
     this.w = playerImage.width;
-    println(this.w);
     this.h = playerImage.height;
-    println(this.h);
   }
 }

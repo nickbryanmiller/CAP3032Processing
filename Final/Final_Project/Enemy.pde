@@ -1,5 +1,7 @@
 class Enemy {
   
+  Score score;
+  
   PImage enemyImage;
   
   float x = 0;
@@ -9,15 +11,30 @@ class Enemy {
   
   int picNum = 1;
   
-  Enemy(int picNum, int x, int y) {
+  int deltaY = 2;
+  
+  Enemy(int picNum, float x, float y, Score score) {
     this.picNum = picNum;
     this.x = x;
     this.y = y;
+    this.score = score;
     setImage(picNum);
   }
   
   void display() {
     image(enemyImage, x, y);
+    
+    y = y + deltaY;
+    
+    checkBounds();
+  }
+  
+  void checkBounds() {
+    if (y >= height) {
+      y = -150;
+      x = random(600);
+      score.incrementScore();
+    }
   }
   
   void setImage(int picNum) {

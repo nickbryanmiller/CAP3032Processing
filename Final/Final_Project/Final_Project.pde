@@ -13,6 +13,8 @@ void setup() {
   menu = new Menu();
   level = new Level();
 
+  frameRate(120);
+  
 }
 
 void draw() {
@@ -43,6 +45,13 @@ void mousePressed() {
   
 }
 
+void keyPressed() {
+  level.pressedKey();
+}
+
+void keyReleased() {
+  level.releasedKey();
+}
 void resetAll() {
   menu.resetAll();
   level.resetAll();
