@@ -11,7 +11,7 @@ class MyColors {
   public color orange = color(255, 165, 0);
   public color pink = color(255, 192, 203);
   public color tan = color(210, 180, 140);
-  public color brown = color(165, 42, 42);
+  public color brown = color(160, 82, 45);
   public color lawnGreen = color(124, 252, 0);
   public color lightSkyBlue = color(135, 206, 250);
   public color gray = color(190, 190, 190);

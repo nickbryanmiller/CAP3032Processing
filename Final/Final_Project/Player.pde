@@ -57,6 +57,9 @@ class Player {
       else if (picNum == 2) {
         playerImage = loadImage("carpet.jpg");
       }
+      else if (picNum == 3) {
+        playerImage = loadImage("car.png");
+      }
       
       setWidthAndHeight();
     }

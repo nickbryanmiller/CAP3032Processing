@@ -10,6 +10,9 @@ boolean titanicPlayed = false;
 SoundFile aladdin;
 boolean aladdinPlayed = false;
 
+SoundFile highway;
+boolean highwayPlayed = false;
+
 MyColors c;
 Menu menu;
 Level level;
@@ -27,6 +30,7 @@ void setup() {
   
   titanic = new SoundFile(this, "titanic.mp3");
   aladdin = new SoundFile(this, "aladdin.mp3");
+  highway = new SoundFile(this, "highway.mp3");
   
 }
 
@@ -56,6 +60,14 @@ void draw() {
       if (!aladdinPlayed) {
         aladdinPlayed = true;
         aladdin.loop();
+      }
+    }
+    
+    else if (menu.difficulty == 2) {
+      
+      if (!highwayPlayed) {
+        highwayPlayed = true;
+        highway.loop();
       }
     }
   }
@@ -93,6 +105,9 @@ void resetAll() {
   
   aladdinPlayed = false;
   aladdin.stop();
+  
+  highwayPlayed = false;
+  highway.stop();
   
   changedImages = false;
 }

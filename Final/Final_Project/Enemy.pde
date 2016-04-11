@@ -44,7 +44,7 @@ class Enemy {
   
   void setImage(int picNum) {
     
-    if (picNum > 0 && picNum < 5) {
+    if (picNum > 0 && picNum < 6) {
       if (picNum == 1) {
         enemyImage = loadImage("iceberg1.png");
       }
@@ -56,6 +56,9 @@ class Enemy {
       }
       else if (picNum == 4) {
         enemyImage = loadImage("cloud1.png");
+      }
+      else if (picNum == 5) {
+        enemyImage = loadImage("rock.png");
       }
       
       this.picNum = picNum;

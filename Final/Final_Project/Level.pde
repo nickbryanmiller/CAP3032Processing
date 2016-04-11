@@ -65,21 +65,35 @@ class Level {
       // Player(int picNum, float x, float y)
       player = new Player(2, 300, 500);
       // Enemy(int picNum, float x, float y)
-      ranNum = int(random(3)) + 1;
       ranNumX = random(600);
       enemy1 = new Enemy(4, ranNumX, -100, score, deltaY);
-      ranNum = int(random(3)) + 1;
       ranNumX = random(600);
       enemy2 = new Enemy(4, ranNumX, -250, score, deltaY);
-      ranNum = int(random(3)) + 1;
       ranNumX = random(600);
       enemy3 = new Enemy(4, ranNumX, -400, score, deltaY);
-      ranNum = int(random(3)) + 1;
       ranNumX = random(600);
       enemy4 = new Enemy(4, ranNumX, -550, score, deltaY);
-      ranNum = int(random(3)) + 1;
       ranNumX = random(600);
       enemy5 = new Enemy(4, ranNumX, -700, score, deltaY);
+    }
+    
+    else if (difficulty == 2) {
+      
+      int deltaY = 4;
+      
+      // Player(int picNum, float x, float y)
+      player = new Player(3, 300, 500);
+      // Enemy(int picNum, float x, float y)
+      ranNumX = random(600);
+      enemy1 = new Enemy(5, ranNumX, -100, score, deltaY);
+      ranNumX = random(600);
+      enemy2 = new Enemy(5, ranNumX, -250, score, deltaY);
+      ranNumX = random(600);
+      enemy3 = new Enemy(5, ranNumX, -400, score, deltaY);
+      ranNumX = random(600);
+      enemy4 = new Enemy(5, ranNumX, -550, score, deltaY);
+      ranNumX = random(600);
+      enemy5 = new Enemy(5, ranNumX, -700, score, deltaY);
     }
     
     // Button(text, x, y, width, height, color) height should always be 35
@@ -95,6 +109,8 @@ class Level {
   }
   
   void display() {
+    
+    background(c.black);
     
     if (!gameIsOver) {
       
