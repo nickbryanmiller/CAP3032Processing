@@ -4,8 +4,8 @@ This is the controller file for the final project.
 
 import processing.sound.*;
 
-SoundFile southpark;
-boolean southparkPlayed = false;
+SoundFile titanic;
+boolean titanicPlayed = false;
 
 SoundFile aladdin;
 boolean aladdinPlayed = false;
@@ -25,7 +25,7 @@ void setup() {
 
   frameRate(120);
   
-  southpark = new SoundFile(this, "warm.wav");
+  titanic = new SoundFile(this, "titanic.mp3");
   aladdin = new SoundFile(this, "aladdin.mp3");
   
 }
@@ -47,9 +47,9 @@ void draw() {
     level.display();
     
     if (menu.difficulty == 0) {
-      if (!southparkPlayed) {
-        southparkPlayed = true;
-        southpark.play();
+      if (!titanicPlayed) {
+        titanicPlayed = true;
+        titanic.loop();
       }
     }
     else if (menu.difficulty == 1) {
@@ -88,8 +88,8 @@ void resetAll() {
   menu.resetAll();
   level.resetAll();
   
-  southparkPlayed = false;
-  southpark.stop();
+  titanicPlayed = false;
+  titanic.stop();
   
   aladdinPlayed = false;
   aladdin.stop();
