@@ -2,6 +2,14 @@
 This is the controller file for the final project.
 */
 
+import processing.sound.*;
+
+SoundFile southpark;
+boolean southparkPlayed = false;
+
+SoundFile aladdin;
+boolean aladdinPlayed = false;
+
 MyColors c;
 Menu menu;
 Level level;
@@ -15,6 +23,10 @@ void setup() {
 
   frameRate(120);
   
+  southpark = new SoundFile(this, "warm.wav");
+  aladdin = new SoundFile(this, "aladdin.mp3");
+  aladdin.loop();
+  
 }
 
 void draw() {
@@ -26,6 +38,16 @@ void draw() {
   else {
     background(c.lightSkyBlue);
     level.display();
+    
+    if (!southparkPlayed) {
+      southparkPlayed = true;
+      southpark.play();
+    }
+    
+    if (!aladdinPlayed) {
+      aladdinPlayed = true;
+      aladdin.play();
+    }
   }
   
 }
@@ -55,4 +77,10 @@ void keyReleased() {
 void resetAll() {
   menu.resetAll();
   level.resetAll();
+  
+  southparkPlayed = false;
+  southpark.stop();
+  
+  aladdinPlayed = false;
+  aladdin.stop();
 }
