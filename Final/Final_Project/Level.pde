@@ -10,6 +10,7 @@ class Level {
   Enemy enemy5;
   
   Button back;
+  Button restart;
   
   // We need all of the enemies to have the same score object
   Score score;
@@ -52,6 +53,10 @@ class Level {
     back = new Button("Back", 25, 10, 40, 35, c.black);
     back.textColor = c.white;
     
+    restart = new Button("Restart?", 300, 300, 60, 35, c.black);
+    restart.textColor = c.white;
+    restart.enabled = false;
+    
     heart = new Heart();
    
   }
@@ -68,6 +73,10 @@ class Level {
       player.display();  
     
       checkForCollision();
+    }
+    else {
+      restart.display();
+      restart.enabled = true;
     }
     
       back.display();
@@ -122,6 +131,10 @@ class Level {
   void pressedMouse(float mx, float my) {
     if (back.isClicked(mx, my)) {
       backIsPressed = true;
+    }
+    
+    if (restart.isClicked(mx, my) && restart.enabled) {
+      resetAll();
     }
   }
   
@@ -183,5 +196,7 @@ void releasedKey() {
     back.textColor = c.white;
     
     heart = new Heart();
+    
+    restart.enabled = false;
   }
 }
