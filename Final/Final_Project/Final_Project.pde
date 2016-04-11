@@ -25,7 +25,6 @@ void setup() {
   
   southpark = new SoundFile(this, "warm.wav");
   aladdin = new SoundFile(this, "aladdin.mp3");
-  aladdin.loop();
   
 }
 
@@ -46,7 +45,7 @@ void draw() {
     
     if (!aladdinPlayed) {
       aladdinPlayed = true;
-      aladdin.play();
+      aladdin.loop();
     }
   }
   
