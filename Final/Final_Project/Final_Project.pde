@@ -14,12 +14,14 @@ MyColors c;
 Menu menu;
 Level level;
 
+boolean changedImages = false;
+
 void setup() {
   size(700, 700);
   
   c = new MyColors();
   menu = new Menu();
-  level = new Level();
+  level = new Level(menu.difficulty);
 
   frameRate(120);
   
@@ -36,16 +38,25 @@ void draw() {
   }
   else {
     background(c.lightSkyBlue);
-    level.display();
     
-    if (!southparkPlayed) {
-      southparkPlayed = true;
-      southpark.play();
+    if (!changedImages) {
+      changedImages = true;
+      level = new Level(menu.difficulty);
     }
     
-    if (!aladdinPlayed) {
-      aladdinPlayed = true;
-      aladdin.loop();
+    level.display();
+    
+    if (menu.difficulty == 0) {
+      if (!southparkPlayed) {
+        southparkPlayed = true;
+        southpark.play();
+      }
+    }
+    else if (menu.difficulty == 1) {
+      if (!aladdinPlayed) {
+        aladdinPlayed = true;
+        aladdin.loop();
+      }
     }
   }
   
@@ -82,4 +93,6 @@ void resetAll() {
   
   aladdinPlayed = false;
   aladdin.stop();
+  
+  changedImages = false;
 }

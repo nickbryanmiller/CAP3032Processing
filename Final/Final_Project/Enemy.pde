@@ -13,11 +13,12 @@ class Enemy {
   
   int deltaY = 2;
   
-  Enemy(int picNum, float x, float y, Score score) {
+  Enemy(int picNum, float x, float y, Score score, int deltaY) {
     this.picNum = picNum;
     this.x = x;
     this.y = y;
     this.score = score;
+    this.deltaY = deltaY;
     setImage(picNum);
   }
   
@@ -43,7 +44,7 @@ class Enemy {
   
   void setImage(int picNum) {
     
-    if (picNum > 0 && picNum < 4) {
+    if (picNum > 0 && picNum < 5) {
       if (picNum == 1) {
         enemyImage = loadImage("iceberg1.png");
       }
@@ -52,6 +53,9 @@ class Enemy {
       }
       else if (picNum == 3) {
         enemyImage = loadImage("iceberg3.png");
+      }
+      else if (picNum == 4) {
+        enemyImage = loadImage("cloud1.png");
       }
       
       this.picNum = picNum;

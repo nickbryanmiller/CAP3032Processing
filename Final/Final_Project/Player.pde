@@ -50,9 +50,15 @@ class Player {
     
     this.picNum = picNum;
     
-    if (picNum == 1) {
+    if (picNum > 0 && picNum < 4) {
+      if (picNum == 1) {
         playerImage = loadImage("boat2.png");
-        setWidthAndHeight();
+      }
+      else if (picNum == 2) {
+        playerImage = loadImage("carpet.jpg");
+      }
+      
+      setWidthAndHeight();
     }
     else {
       print("picture number is not in the range");

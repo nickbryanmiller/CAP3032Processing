@@ -2,6 +2,7 @@ class Level {
  
   MyColors c;
   
+  // Boat pieces
   Player player;
   Enemy enemy1;
   Enemy enemy2;
@@ -24,30 +25,62 @@ class Level {
   
   boolean gameIsOver = false;
   
-  Level() {
+  int difficulty = 0;
+  
+  Level(int difficulty) {
+    
+    this.difficulty = difficulty;
+    
     c = new MyColors();
     
     score = new Score();
     
-    // Player(int picNum, float x, float y)
-    player = new Player(1, 300, 500);
-    
-    // Enemy(int picNum, float x, float y)
-    ranNum = int(random(3)) + 1;
-    ranNumX = random(600);
-    enemy1 = new Enemy(ranNum, ranNumX, -100, score);
-    ranNum = int(random(3)) + 1;
-    ranNumX = random(600);
-    enemy2 = new Enemy(ranNum, ranNumX, -250, score);
-    ranNum = int(random(3)) + 1;
-    ranNumX = random(600);
-    enemy3 = new Enemy(ranNum, ranNumX, -400, score);
-    ranNum = int(random(3)) + 1;
-    ranNumX = random(600);
-    enemy4 = new Enemy(ranNum, ranNumX, -550, score);
-    ranNum = int(random(3)) + 1;
-    ranNumX = random(600);
-    enemy5 = new Enemy(ranNum, ranNumX, -700, score);
+    if (difficulty == 0) {
+      
+      int deltaY = 2;
+      
+      // Player(int picNum, float x, float y)
+      player = new Player(1, 300, 500);
+      // Enemy(int picNum, float x, float y)
+      ranNum = int(random(3)) + 1;
+      ranNumX = random(600);
+      enemy1 = new Enemy(ranNum, ranNumX, -100, score, deltaY);
+      ranNum = int(random(3)) + 1;
+      ranNumX = random(600);
+      enemy2 = new Enemy(ranNum, ranNumX, -250, score, deltaY);
+      ranNum = int(random(3)) + 1;
+      ranNumX = random(600);
+      enemy3 = new Enemy(ranNum, ranNumX, -400, score, deltaY);
+      ranNum = int(random(3)) + 1;
+      ranNumX = random(600);
+      enemy4 = new Enemy(ranNum, ranNumX, -550, score, deltaY);
+      ranNum = int(random(3)) + 1;
+      ranNumX = random(600);
+      enemy5 = new Enemy(ranNum, ranNumX, -700, score, deltaY);
+    }
+    else if (difficulty == 1) {
+      
+      int deltaY = 3;
+      
+      // Player(int picNum, float x, float y)
+      player = new Player(2, 300, 500);
+      // Enemy(int picNum, float x, float y)
+      ranNum = int(random(3)) + 1;
+      ranNumX = random(600);
+      enemy1 = new Enemy(4, ranNumX, -100, score, deltaY);
+      ranNum = int(random(3)) + 1;
+      ranNumX = random(600);
+      enemy2 = new Enemy(4, ranNumX, -250, score, deltaY);
+      ranNum = int(random(3)) + 1;
+      ranNumX = random(600);
+      enemy3 = new Enemy(4, ranNumX, -400, score, deltaY);
+      ranNum = int(random(3)) + 1;
+      ranNumX = random(600);
+      enemy4 = new Enemy(4, ranNumX, -550, score, deltaY);
+      ranNum = int(random(3)) + 1;
+      ranNumX = random(600);
+      enemy5 = new Enemy(4, ranNumX, -700, score, deltaY);
+    }
     
     // Button(text, x, y, width, height, color) height should always be 35
     back = new Button("Back", 25, 10, 40, 35, c.black);
@@ -64,13 +97,13 @@ class Level {
   void display() {
     
     if (!gameIsOver) {
+      
       enemy1.display();
       enemy2.display();
       enemy3.display();
       enemy4.display();
       enemy5.display();
-    
-      player.display();  
+      player.display();
     
       checkForCollision();
     }
@@ -85,18 +118,15 @@ class Level {
   }
   
   void checkForCollision() {
+    
     // Collision with enemy1
     modularCheck(enemy1);
-    
     // Collision with enemy2
     modularCheck(enemy2);
-    
     // Collision with enemy3
     modularCheck(enemy3);
-    
     // Collision with enemy4
     modularCheck(enemy4);
-    
     // Collision with enemy5
     modularCheck(enemy5);
   }
@@ -174,22 +204,24 @@ void releasedKey() {
     // Player(int picNum, float x, float y)
     player = new Player(1, 300, 500);
     
+    int deltaY = 2;
+    
     // Enemy(int picNum, float x, float y)
     ranNum = int(random(3)) + 1;
     ranNumX = random(600);
-    enemy1 = new Enemy(ranNum, ranNumX, -100, score);
+    enemy1 = new Enemy(ranNum, ranNumX, -100, score, deltaY);
     ranNum = int(random(3)) + 1;
     ranNumX = random(600);
-    enemy2 = new Enemy(ranNum, ranNumX, -250, score);
+    enemy2 = new Enemy(ranNum, ranNumX, -250, score, deltaY);
     ranNum = int(random(3)) + 1;
     ranNumX = random(600);
-    enemy3 = new Enemy(ranNum, ranNumX, -400, score);
+    enemy3 = new Enemy(ranNum, ranNumX, -400, score, deltaY);
     ranNum = int(random(3)) + 1;
     ranNumX = random(600);
-    enemy4 = new Enemy(ranNum, ranNumX, -550, score);
+    enemy4 = new Enemy(ranNum, ranNumX, -550, score, deltaY);
     ranNum = int(random(3)) + 1;
     ranNumX = random(600);
-    enemy5 = new Enemy(ranNum, ranNumX, -700, score);
+    enemy5 = new Enemy(ranNum, ranNumX, -700, score, deltaY);
     
     // Button(text, x, y, width, height, color) height should always be 35
     back = new Button("Back", 25, 10, 40, 35, c.black);

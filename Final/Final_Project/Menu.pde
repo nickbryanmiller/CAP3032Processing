@@ -8,6 +8,8 @@ class Menu {
   Button hard;
   Button start;
   
+  int difficulty = 0;
+  
   Boolean menuIsDone = false;
 
   Menu() {
@@ -38,16 +40,19 @@ class Menu {
       easy.col = c.gray;
       medium.col = c.white;
       hard.col = c.white;
+      difficulty = 0;
     }
     else if (medium.isClicked(mx, my)) {
       easy.col = c.white;
       medium.col = c.gray;
       hard.col = c.white;
+      difficulty = 1;
     }
     else if (hard.isClicked(mx, my)) {
       easy.col = c.white;
       medium.col = c.white;
       hard.col = c.gray;
+      difficulty = 2;
     }
     
     if (start.isClicked(mx, my)) {      
