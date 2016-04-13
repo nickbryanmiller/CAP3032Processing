@@ -110,8 +110,6 @@ class Level {
   
   void display() {
     
-    background(c.black);
-    
     if (!gameIsOver) {
       
       enemy1.display();

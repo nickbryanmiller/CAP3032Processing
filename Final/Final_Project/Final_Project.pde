@@ -48,8 +48,6 @@ void draw() {
       level = new Level(menu.difficulty);
     }
     
-    level.display();
-    
     if (menu.difficulty == 0) {
       if (!titanicPlayed) {
         titanicPlayed = true;
@@ -65,11 +63,15 @@ void draw() {
     
     else if (menu.difficulty == 2) {
       
+      background(c.black);
+      
       if (!highwayPlayed) {
         highwayPlayed = true;
         highway.loop();
       }
     }
+    
+    level.display();
   }
   
 }
