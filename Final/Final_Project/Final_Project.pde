@@ -36,7 +36,7 @@ void setup() {
 
 void draw() {
   if (!menu.menuIsDone) {
-    background(127,255,212);
+    background(19, 21, 21);
     menu.display();
   }
   else {

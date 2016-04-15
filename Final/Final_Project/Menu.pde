@@ -16,6 +16,8 @@ class Menu {
   int difficulty = 0;
   
   Boolean menuIsDone = false;
+  
+  FallingObject[] objects;
 
   Menu() {
     c = new MyColors();
@@ -27,9 +29,25 @@ class Menu {
     hard = new Button("Hard", 550, 400, 55, 35, c.white);
     start = new Button("Start!", 320, 500, 60, 35, c.white);
     
+    objects = new FallingObject[60];
+    for(int i = 0; i < objects.length; i++) {
+      objects[i] = new FallingObject(700, 700);
+    }
+    
+    prev1 = loadImage("ship.png");
+    prev2 = loadImage("aladdin.png");
+    prev3 = loadImage("car1.png");
+    
   }
   
   void display() {
+    fill(c.white);
+    
+    for(int i = 0; i < objects.length; i++) {
+      objects[i].move();
+      objects[i].display();
+    }
+    
     fill(c.white);
     textSize(35);
     font = loadFont("Bauhaus93-48.vlw");
@@ -38,12 +56,12 @@ class Menu {
     textSize(20);
     text("Select your Level", 275,200);
     
-    prev1 = loadImage("ship.png");
-    prev2 = loadImage("aladdin.png");
-    prev3 = loadImage("car1.png");
-    
+    fill(c.white);
+    rect(48, 248, prev1.width + 4, prev1.height + 4);
     image(prev1,50,250);
+    rect(278, 248, prev2.width + 4, prev2.height + 4);
     image(prev2,280,250);
+    rect(498, 248, prev3.width + 4, prev3.height + 4);
     image(prev3,500,250);
     
     info.display();
