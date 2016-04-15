@@ -10,8 +10,8 @@ class Score {
   void display() {
     fill(c.white);
     textSize(32);
-    text("Score:", 270, 40);
-    text(Integer.toString(value), 370, 40);
+    text("Score:", 300, 40);
+    text(Integer.toString(value), 400, 40);
     
   }
   

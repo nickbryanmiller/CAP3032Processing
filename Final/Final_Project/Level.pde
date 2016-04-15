@@ -97,10 +97,10 @@ class Level {
     }
     
     // Button(text, x, y, width, height, color) height should always be 35
-    back = new Button("Back", 25, 10, 40, 35, c.black);
+    back = new Button("Back", 25, 10, 50, 35, c.black);
     back.textColor = c.white;
     
-    restart = new Button("Restart?", 300, 300, 60, 35, c.black);
+    restart = new Button("Restart?", 310, 300, 75, 35, c.black);
     restart.textColor = c.white;
     restart.enabled = false;
     

@@ -35,13 +35,12 @@ void setup() {
 }
 
 void draw() {
-  
   if (!menu.menuIsDone) {
-    background(c.black);
+    background(127,255,212);
     menu.display();
   }
   else {
-    background(c.lightSkyBlue);
+    background(c.blue);
     
     if (!changedImages) {
       changedImages = true;
@@ -55,6 +54,8 @@ void draw() {
       }
     }
     else if (menu.difficulty == 1) {
+      background(c.lightSkyBlue);
+      
       if (!aladdinPlayed) {
         aladdinPlayed = true;
         aladdin.loop();
@@ -88,7 +89,6 @@ void mousePressed() {
       resetAll();
     }
   }
-  
 }
 
 void keyPressed() {

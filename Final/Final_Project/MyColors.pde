@@ -2,7 +2,7 @@ class MyColors {
   
   public color red = color(255, 0, 0);
   public color green = color(0, 255, 0);
-  public color blue = color(0, 0, 255);
+  public color blue = color(100,149,237);
   public color cyan = color(0, 255, 255);
   public color yellow = color(255, 0, 255);
   public color purple = color(0, 0, 255);
