@@ -4,6 +4,8 @@ This is the controller file for the final project.
 
 import processing.sound.*;
 
+PImage road;
+
 SoundFile titanic;
 boolean titanicPlayed = false;
 
@@ -32,8 +34,11 @@ void setup() {
   aladdin = new SoundFile(this, "aladdin.mp3");
   highway = new SoundFile(this, "highway.mp3");
   
+  road = loadImage("road.jpg");
+  
 }
 
+//Sets up background and music for level selections
 void draw() {
   if (!menu.menuIsDone) {
     background(19, 21, 21);
@@ -64,7 +69,8 @@ void draw() {
     
     else if (menu.difficulty == 2) {
       
-      background(c.black);
+      background(road);
+      //background(c.black);
       
       if (!highwayPlayed) {
         highwayPlayed = true;
@@ -78,7 +84,6 @@ void draw() {
 }
 
 void mousePressed() {
-  
   if (!menu.menuIsDone) {
     menu.pressedMouse(mouseX, mouseY);
   }

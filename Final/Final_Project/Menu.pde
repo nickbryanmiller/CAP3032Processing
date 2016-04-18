@@ -7,6 +7,9 @@ class Menu {
   Button hard;
   Button start;
   Button done;
+  Button pre1;
+  Button pre2;
+  Button pre3;
   
   PImage prev1;
   PImage prev2;
@@ -30,7 +33,10 @@ class Menu {
     medium = new Button("Medium", 310, 400, 80, 35, c.white);
     hard = new Button("Hard", 550, 400, 55, 35, c.white);
     start = new Button("Start!", 320, 500, 60, 35, c.white);
-    done = new Button("Done", 320,550,60,35, c.white);
+    done = new Button("Done", 320, 550, 60, 35, c.white);
+    pre1 = new Button("", 50, 250, 150, 148, c.white);
+    pre2 = new Button("", 280, 250, 150, 148, c.white);
+    pre3 = new Button("", 500, 250, 150, 148, c.white);
     
     objects = new FallingObject[60];
     for(int i = 0; i < objects.length; i++) {
@@ -60,6 +66,7 @@ class Menu {
       textSize(20);
       text("Select your Level", 275,200);
       
+      // Borders
       fill(c.white);
       rect(48, 248, prev1.width + 4, prev1.height + 4);
       image(prev1,50,250);
@@ -90,20 +97,21 @@ class Menu {
     }
   }
   
+  //Highlights which level/difficulty is pressed for playing
   void pressedMouse(float mx, float my) {
-    if (easy.isClicked(mx, my)) {
+    if (easy.isClicked(mx, my) || pre1.isClicked(mx,my)) {
       easy.col = c.gray;
       medium.col = c.white;
       hard.col = c.white;
       difficulty = 0;
     }
-    else if (medium.isClicked(mx, my)) {
+    else if (medium.isClicked(mx, my) || pre2.isClicked(mx,my)) {
       easy.col = c.white;
       medium.col = c.gray;
       hard.col = c.white;
       difficulty = 1;
     }
-    else if (hard.isClicked(mx, my)) {
+    else if (hard.isClicked(mx, my) || pre3.isClicked(mx,my)) {
       easy.col = c.white;
       medium.col = c.white;
       hard.col = c.gray;

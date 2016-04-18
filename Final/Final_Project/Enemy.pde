@@ -13,6 +13,7 @@ class Enemy {
   
   int deltaY = 2;
   
+  //Creates enemy by selection, size, score, and falling position
   Enemy(int picNum, float x, float y, Score score, int deltaY) {
     this.picNum = picNum;
     this.x = x;
@@ -22,6 +23,7 @@ class Enemy {
     setImage(picNum);
   }
   
+  //Displays the enemies
   void display() {
     image(enemyImage, x, y);
     
@@ -42,8 +44,8 @@ class Enemy {
       x = random(600);
   }
   
-  void setImage(int picNum) {
-    
+  //Selects which enemy image to use
+  void setImage(int picNum) {    
     if (picNum > 0 && picNum < 6) {
       if (picNum == 1) {
         enemyImage = loadImage("iceberg1.png");

@@ -2,10 +2,10 @@ class FallingObject {
   float x;
   float y;
   float vel;
-  float zvel;
   
   MyColors c = new MyColors();
   
+  //Position and falling "velocity" for objects
   FallingObject(int maxx, int maxy) {
     this.x = random(maxx);
     this.y = random(maxy);
@@ -14,9 +14,9 @@ class FallingObject {
   
   void move(){
     y+=vel;
-    //x+=vel;
   }
   
+  //Displays the falling objects
   void display(){
     int x2 = int(x%700);
     int y2 = int(y%700);

@@ -14,12 +14,14 @@ class Heart {
     heart3 = loadImage("heartfull.png");
   }
   
+  //Displays lives
   void display() {
     image(heart1, 500, 10);
     image(heart2, 560, 10);
     image(heart3, 620, 10);
   }
   
+  //Decrements hearts as lives are lost
   void decrementHeart() {
     lives = lives - 1;
     
@@ -36,6 +38,5 @@ class Heart {
   }
   
   void incrementHeart() {
-    
   }
 }
