@@ -1,0 +1,43 @@
+Project Analysis:
+
+	We decided to go with a infinite scroller because those are the most fun to play.
+	We wanted to make a game that people could play for any amount of time.
+	This also contributes to a competitive environment with people trying to get the highest score.
+
+	The head controller class is called Final_Project and it manages two controllers (Menu and Levels).
+	Menu controls the display while the menu screen is up (info, difficulty, and start).
+	Once start is pressed Menu notifies Final_Project and then Final_Project switches to call Levels.
+	Levels controls the display while the gameplay is occuring (player, enemies, lives, and score).
+	Each of these are a class (Player, Enemy, Lives, and Score).
+	Every enemy contains the same reference to score and lives.
+
+	Ultimately we have a hierarchy of control and views passed down and managed by the sub-components.
+
+Work Distribution:
+
+	Nick Miller:
+		Level 1
+		Player Class
+		Enemy Class
+		Score
+		Lives
+
+	Kayla Pozo:
+		Level 2
+		Menu
+		Music
+
+	Vanessa Peixoto:
+		Level 3
+		Debug
+		Artwork
+
+Difficulties Encountered:
+	
+	Proper Collision testing so that whenever ANY part of the player touched the enemy a life was lost.
+
+	Custom Button so that we could easily detect a button press has an enabled feature.
+	This enabled feature was sometimes left true and could lead to accidental view switching even though it was hidden.
+
+	The enemies sometimes looked laggy while sliding down the screen.
+	To beat this we increased the frame rate and decreased their deltaY so that they moved at the same rate with no lag.

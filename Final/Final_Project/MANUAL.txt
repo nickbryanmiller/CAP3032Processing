@@ -1,0 +1,18 @@
+Instructions:
+
+The goal is to dodge all of the enemies.
+You do this by using the directional keypad.
+Left moves you left.
+Right moves right.
+Up moves you up.
+Down moves you down.
+
+If you touch an enemy you lose one of your hearts at the top right.
+If you lose three hearts the game is over.
+
+You may select any difficulty to play.
+These settings only change the images, music, and the speed of the enemies.
+
+At any time you can back out of the game.
+If you die you can restart.
+
