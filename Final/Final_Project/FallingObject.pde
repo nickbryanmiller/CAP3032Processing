@@ -9,7 +9,7 @@ class FallingObject {
   FallingObject(int maxx, int maxy) {
     this.x = random(maxx);
     this.y = random(maxy);
-    vel = random(3,6);
+    vel = random(1,2);
   }
   
   void move(){

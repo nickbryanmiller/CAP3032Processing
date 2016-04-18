@@ -6,6 +6,9 @@ import processing.sound.*;
 
 PImage road;
 
+SoundFile backgroundSong;
+boolean backgroundPlayed = false;
+
 SoundFile titanic;
 boolean titanicPlayed = false;
 
@@ -30,6 +33,8 @@ void setup() {
 
   frameRate(120);
   
+  backgroundSong = new SoundFile(this, "namine.wav");
+  
   titanic = new SoundFile(this, "titanic.mp3");
   aladdin = new SoundFile(this, "aladdin.mp3");
   highway = new SoundFile(this, "highway.mp3");
@@ -41,6 +46,12 @@ void setup() {
 //Sets up background and music for level selections
 void draw() {
   if (!menu.menuIsDone) {
+    
+    if (!backgroundPlayed) {
+        backgroundPlayed = true;
+        backgroundSong.loop();
+      }
+      
     background(19, 21, 21);
     menu.display();
   }
@@ -54,6 +65,7 @@ void draw() {
     
     if (menu.difficulty == 0) {
       if (!titanicPlayed) {
+        backgroundSong.stop();
         titanicPlayed = true;
         titanic.loop();
       }
@@ -62,6 +74,7 @@ void draw() {
       background(c.lightSkyBlue);
       
       if (!aladdinPlayed) {
+        backgroundSong.stop();
         aladdinPlayed = true;
         aladdin.loop();
       }
@@ -73,6 +86,7 @@ void draw() {
       //background(c.black);
       
       if (!highwayPlayed) {
+        backgroundSong.stop();
         highwayPlayed = true;
         highway.loop();
       }
@@ -106,6 +120,9 @@ void keyReleased() {
 void resetAll() {
   menu.resetAll();
   level.resetAll();
+  
+  backgroundPlayed = false;
+  backgroundSong.stop();
   
   titanicPlayed = false;
   titanic.stop();
